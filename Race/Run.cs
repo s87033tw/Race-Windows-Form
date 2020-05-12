@@ -17,14 +17,14 @@ namespace Race
         int name;
         Thread[] t;
 
-        public Run(PictureBox pictureBox, Form form, Random rad, int name)
+        public Run(PictureBox pictureBox, Form form, Random rad, int name)//Form2使用的建構子
         {
             pb = pictureBox;
             f = form;
             this.rad = rad;
             this.name = name + 1;
         }
-        public Run(PictureBox pictureBox, Form form, int name)
+        public Run(PictureBox pictureBox, Form form, int name)//Form3使用的建構子
         {
             pb = pictureBox;
             f = form;
@@ -45,11 +45,11 @@ namespace Race
             else
             {
                 MessageBox.Show("結束");
-                MethodInvoker methodInvoker = new MethodInvoker(f.Close);
+                MethodInvoker methodInvoker = new MethodInvoker(f.Close);//執行緒內Close視窗必須同步前景
                 f.Invoke(methodInvoker);
             }       
         }
-        private void invoke(bool XY)
+        private void invoke(bool XY)//與前景執行緒同步
         {
             if (XY)
                 while (pb.Location.X < 500)
@@ -58,7 +58,7 @@ namespace Race
                     {
                         UpdataUI up = new UpdataUI(changeLocation);
                         f.Invoke(up, pb.Location);
-                        Thread.Sleep(100);
+                        Thread.Sleep(100);//給執行緒反應切換的時間
                     }
                     Console.WriteLine(pb.Location);
                 }
@@ -80,6 +80,7 @@ namespace Race
         }
         private delegate void UpdataUI(Point point);
         private delegate void UpdataUI2(Point point, int temp);
+        
         private void changeLocation(Point point)
         {
             int x;
