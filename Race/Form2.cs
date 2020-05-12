@@ -13,7 +13,6 @@ namespace Race
 {
     public partial class Form2 : Form
     {
-        bool racePoint = false;
         Thread[] t = new Thread[3];
         Run[] run = new Run[3];
         PictureBox[] p = new PictureBox[3];
@@ -37,7 +36,7 @@ namespace Race
             }
 
             for (int i = 0; i < 3; i++)
-                t[i] = new Thread(new ThreadStart(run[i].runner));
+                t[i] = new Thread(new ThreadStart(run[i].alone));
 
         }
 
@@ -71,50 +70,11 @@ namespace Race
                     i++;
             }
             if (MessageBox.Show((i + 1).ToString() + " win", "", MessageBoxButtons.OK).Equals(DialogResult.OK))
-                Environment.Exit(Environment.ExitCode);
-        }
-    }
-
-    public class Run
-    {
-        PictureBox pb;
-        Form2 f2;
-        Random rad;
-        int name;
-
-        public Run(PictureBox pictureBox, Form2 form2, Random rad, int name)
-        {
-            pb = pictureBox;
-            f2 = form2;
-            this.rad = rad;
-            this.name = name + 1;
-        }
-
-        private delegate void UpdataUI(Point point);
-
-        public void runner()
-        {
-            while (pb.Location.X < 500)
             {
-                if (f2.InvokeRequired)
-                {
-                    UpdataUI up = new UpdataUI(changeLocation);
-                    f2.Invoke(up, pb.Location);
-                    Thread.Sleep(100);
-                }
-                Console.WriteLine(pb.Location);
+                Thread.Sleep(1000);
+                MethodInvoker mi = new MethodInvoker(this.Close);
+                this.Invoke(mi);
             }
-        }
-
-        public void changeLocation(Point point)
-        {
-            int x = 0;
-
-            int r = rad.Next(1, 10);
-            x = point.X + r;
-
-
-            pb.Location = new Point(x, point.Y);
         }
     }
 }

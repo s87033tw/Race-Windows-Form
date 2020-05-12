@@ -10,3 +10,15 @@ C:\Users\ooo\source\repos\Race\Race\obj\Debug\Race.exe
 C:\Users\ooo\source\repos\Race\Race\obj\Debug\Race.pdb
 C:\Users\ooo\source\repos\Race\Race\obj\Debug\Race.Form2.resources
 C:\Users\ooo\source\repos\Race\Race\obj\Debug\Race.Form3.resources
+C:\Users\ooo\source\repos\Race-Windows-Form\Race\bin\Debug\Race.exe.config
+C:\Users\ooo\source\repos\Race-Windows-Form\Race\bin\Debug\Race.exe
+C:\Users\ooo\source\repos\Race-Windows-Form\Race\bin\Debug\Race.pdb
+C:\Users\ooo\source\repos\Race-Windows-Form\Race\obj\Debug\Race.csprojAssemblyReference.cache
+C:\Users\ooo\source\repos\Race-Windows-Form\Race\obj\Debug\Race.Form1.resources
+C:\Users\ooo\source\repos\Race-Windows-Form\Race\obj\Debug\Race.Form2.resources
+C:\Users\ooo\source\repos\Race-Windows-Form\Race\obj\Debug\Race.Form3.resources
+C:\Users\ooo\source\repos\Race-Windows-Form\Race\obj\Debug\Race.Properties.Resources.resources
+C:\Users\ooo\source\repos\Race-Windows-Form\Race\obj\Debug\Race.csproj.GenerateResource.cache
+C:\Users\ooo\source\repos\Race-Windows-Form\Race\obj\Debug\Race.csproj.CoreCompileInputs.cache
+C:\Users\ooo\source\repos\Race-Windows-Form\Race\obj\Debug\Race.exe
+C:\Users\ooo\source\repos\Race-Windows-Form\Race\obj\Debug\Race.pdb
