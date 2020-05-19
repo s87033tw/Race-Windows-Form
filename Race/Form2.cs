@@ -17,6 +17,7 @@ namespace Race
         Run[] run = new Run[3];
         PictureBox[] p = new PictureBox[3];
         Random rad = new Random();
+        bool a = true;
 
         public Form2()
         {
@@ -74,6 +75,22 @@ namespace Race
                 Thread.Sleep(1000);
                 MethodInvoker mi = new MethodInvoker(this.Close);
                 this.Invoke(mi);
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (a)
+            {
+                foreach (Thread thread in t)
+                    thread.Suspend();
+                a = false;
+            }
+            else
+            {
+                foreach (Thread thread in t)
+                    thread.Resume();
+                a = true;
             }
         }
     }
