@@ -36,5 +36,16 @@ namespace Race
         {
             Environment.Exit(Environment.ExitCode);
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            linkLabel1.Text = "https://github.com/s87033tw/Race-Windows-Form";
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            linkLabel1.LinkVisited = true;
+            System.Diagnostics.Process.Start("https://github.com/s87033tw/Race-Windows-Form");
+        }
     }
 }

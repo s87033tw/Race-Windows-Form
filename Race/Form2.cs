@@ -49,6 +49,8 @@ namespace Race
             }
 
             new Thread(new ThreadStart(listenerThread)).Start();
+
+            button2.Enabled = true;
         }
 
         private void listenerThread()
